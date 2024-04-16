@@ -29,8 +29,24 @@ const automobili = [
 // let altroAuto = [...automobili.filter((elem) => elem.alimentazione !== "diesel" && elem.alimentazione !== "benzina")];
 // console.log(altroAuto);
 
-let copiaArray = [...automobili];
+// let autoDiesel = autocopiaArray.filter((elem) => elem.alimentazione === "diesel")
+// let autoBenzina = autocopiaArray.filter((elem) => elem.alimentazione === "benzina")
+// let altroAuto = autocopiaArray.filter((elem) => elem.alimentazione !== "diesel" && elem.alimentazione !== "benzina")
 
-let autoDiesel = autocopiaArray.filter((elem) => elem.alimentazione === "diesel")
-let autoBenzina = autocopiaArray.filter((elem) => elem.alimentazione === "benzina")
-let altroAuto = autocopiaArray.filter((elem) => elem.alimentazione !== "diesel" && elem.alimentazione !== "benzina")
+let autoDiesel = [];
+let autoBenzina = [];
+let altroAuto = [];
+
+automobili.forEach(element => {
+    if (element.alimentazione === "diesel") {
+        autoDiesel.push(element);
+    } else if (element.alimentazione === "benzina") {
+        autoBenzina.push(element);
+    } else {
+        altroAuto.push(element);
+    }
+});
+
+console.log(autoDiesel);
+console.log(autoBenzina);
+console.log(altroAuto);
