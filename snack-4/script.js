@@ -20,6 +20,7 @@ const automobili = [
 //* con ... copio l'array nella varibile nuova
 //* aggiungo filter per l'alimentazione
 
+//* tentativo 1
 // let autoDiesel = [...automobili.filter((elem) => elem.alimentazione === "diesel")];
 // console.log(autoDiesel);
 
@@ -29,14 +30,16 @@ const automobili = [
 // let altroAuto = [...automobili.filter((elem) => elem.alimentazione !== "diesel" && elem.alimentazione !== "benzina")];
 // console.log(altroAuto);
 
-// let autoDiesel = autocopiaArray.filter((elem) => elem.alimentazione === "diesel")
-// let autoBenzina = autocopiaArray.filter((elem) => elem.alimentazione === "benzina")
-// let altroAuto = autocopiaArray.filter((elem) => elem.alimentazione !== "diesel" && elem.alimentazione !== "benzina")
+//* tentativo 2
+// let autoDiesel = automobili.filter((elem) => elem.alimentazione === "diesel")
+// let autoBenzina = automobili.filter((elem) => elem.alimentazione === "benzina")
+// let altroAuto = automobili.filter((elem) => elem.alimentazione !== "diesel" && elem.alimentazione !== "benzina")
 
 let autoDiesel = [];
 let autoBenzina = [];
 let altroAuto = [];
 
+//* tentativo 3
 automobili.forEach(element => {
     if (element.alimentazione === "diesel") {
         autoDiesel.push(element);
@@ -50,3 +53,4 @@ automobili.forEach(element => {
 console.log(autoDiesel);
 console.log(autoBenzina);
 console.log(altroAuto);
+
