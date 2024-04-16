@@ -19,11 +19,18 @@ const automobili = [
 //* variabile di appoggio con array copiato
 //* con ... copio l'array nella varibile nuova
 //* aggiungo filter per l'alimentazione
-let autoDiesel = [...automobili.filter((elem) => elem.alimentazione === "diesel")];
-console.log(autoDiesel);
 
-let autoBenzina = [...automobili.filter((elem) => elem.alimentazione === "benzina")];
-console.log(autoBenzina);
+// let autoDiesel = [...automobili.filter((elem) => elem.alimentazione === "diesel")];
+// console.log(autoDiesel);
 
-let altroAuto = [...automobili.filter((elem) => elem.alimentazione !== "diesel" && elem.alimentazione !== "benzina")];
-console.log(altroAuto);
+// let autoBenzina = [...automobili.filter((elem) => elem.alimentazione === "benzina")];
+// console.log(autoBenzina);
+
+// let altroAuto = [...automobili.filter((elem) => elem.alimentazione !== "diesel" && elem.alimentazione !== "benzina")];
+// console.log(altroAuto);
+
+let copiaArray = [...automobili];
+
+let autoDiesel = autocopiaArray.filter((elem) => elem.alimentazione === "diesel")
+let autoBenzina = autocopiaArray.filter((elem) => elem.alimentazione === "benzina")
+let altroAuto = autocopiaArray.filter((elem) => elem.alimentazione !== "diesel" && elem.alimentazione !== "benzina")
