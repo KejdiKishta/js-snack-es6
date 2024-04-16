@@ -17,16 +17,30 @@ const persone = [
     { nome: "Roberta", cognome: "Costa", eta: 38 }
 ];
 
+//! TENTATIVO 1
+
 //* apppoggio
-const persone2 = [];
+// const persone2 = [];
 
 //* foreach che controlla l'età
-persone.forEach(element => {
-    if (element.eta >= 18) {
-        persone2.push(`${element.nome} ${element.cognome} ha ${element.eta} quindi può guidare`)
+// persone.forEach(element => {
+//     if (element.eta >= 18) {
+//         persone2.push(`${element.nome} ${element.cognome} ha ${element.eta} quindi può guidare`)
+//     } else {
+//         persone2.push(`${element.nome} ${element.cognome} ha ${element.eta} quindi NON può guidare`)
+//     }
+// });
+
+// console.log(persone2);
+
+//! CORREZIONE
+
+const esito = persone.map(persona => {
+    if (persona.eta >= 18) {
+        return `${persona.nome} ${persona.cognome} ha ${persona.eta} quindi può guidare`
     } else {
-        persone2.push(`${element.nome} ${element.cognome} ha ${element.eta} quindi NON può guidare`)
+        return `${persona.nome} ${persona.cognome} ha ${persona.eta} quindi NON può guidare`
     }
 });
 
-console.log(persone2);
+console.log(esito);
